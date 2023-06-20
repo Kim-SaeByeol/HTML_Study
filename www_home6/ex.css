@@ -1,0 +1,19 @@
+       strong { color: red;}
+/*strong 태그를 쓰면 color 는 레드로 나옴.*/
+       .ex {color: blue; background-color: floralwhite;}
+       #main {color: darkkhaki;}
+       a:link {color: blueviolet;}
+       a:visited {color: azure;}
+       a:hover {color: aquamarine;}
+    
+p { 
+    font-family: "궁서체", "굴림체";
+    font-size: 20pt;
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 40pt;
+}
+h3 {
+    text-align: center;
+    text-shadow: 1pt 2pt gray;
+}

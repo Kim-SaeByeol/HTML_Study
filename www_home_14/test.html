@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta authors="임순범 박희민"/>
+<meta copyright="본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음"/>
+<title> </title>
+</head>
+<body>
+  <h1>사용자 정의 함수 활용</h1>
+  <script type="text/javascript">
+    function add(a,b){
+        return (a + b);
+    }
+      
+    function sub(a,b){
+        return (a - b);
+    }  
+    
+    var res1 = add(10, 30);
+    var res2 = add(10, "30"); 
+      
+      //"/n" 은 적용되지 않음.
+      // ' + ' 는 더하거나 문자를 연결해줌.
+      // + 만 두개의 역할이 있고 나머지 산술 연산자는 계산 밖에 못함.
+      // 계산을 위해 자동으로 Number 로 형변환이 됨.
+    document.write("res1 =" + res1 + "<br>");
+    document.write("res2 =" + res2 + "<br>");
+    document.write("두 수를 빼기 =" + sub(10,20) + "<br>");
+    document.write("두 수를 빼기 =" + sub(10,"20") + "<br>");
+    </script>
+</body>
+</html>

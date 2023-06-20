@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- An example for JavaScript Control/Loop Statements -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta authors="임순범 박희민" />
+    <meta copyright="본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음" />
+    <title> Control & Loop Statements </title>
+</head>
+
+<body>
+
+    <p> A Simple JavaScript Example for Control and Loop Statements <br /> </p>
+    <table border="1">
+        <script type="text/javascript">
+            document.write("<caption> 책 주문 입력 내용 </caption>");
+            document.write("<tr>");
+            document.write("<th> 제목 </th>");
+            document.write("</tr>");
+
+            var n = prompt("주문할 책 수량을 입력 하세요.", "1");
+
+            for (var i = 0; i < n; i++) {
+                var book1 = "1. 빅데이터 시각화 실습";
+                var book2 = "2. JAVA";
+                var book3 = "3. HTML";
+
+                var book_List = book1 + "\n" + book2 + "\n" + book3;
+
+                var choice = prompt("책 번호를 선택하세요. \n" + book_List, "1");
+
+                var title;
+
+                //    if(choice == "1"){
+                //        title = book1;
+                //    } else if(choice == "2"){
+                //        title = book2;
+                //    } else if(choice == "3"){
+                //        title = book3;
+                //    } else {
+                ////      alert("번호 선택을 다시 하세요.");
+                //        tilte =" ";
+                //    }
+                switch (choice) {
+                    case "1":
+                        title = book1;
+                        break;
+                    case "2":
+                        title = book2;
+                        break;
+                    case "3":
+                        title = book3;
+                        break;
+                    default:
+                        alert("번호 선택을 다시 하세요.")
+                        tilte = " ";
+                        break;
+                }
+            
+            document.write("<tr>");
+            document.write("<td>" + "[" + (i+1) +"]" + title + "</td>");
+            document.write("</tr>");
+            }
+        </script>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>오디오 비디오 연습</h1>
+<!--<audio src="media/song.mp3" controls>재생할 수 없습니다.</audio>-->
+<audio controls>
+<source src="media/song.mp3" type="audio/mp3">
+<source src="media/song.mp3" type="audio/ogg">
+</audio>
+
+<video src="media/bear.mp4" controls width="450"m height="300" poster="img/html5.jpg" preload="auto">재생 할 수 없습니다.</video>
+<!--poster는 재생되기 전에 코덱을 받는 동안 보여줄 사진-->
+<!--preload="auto" 에서 
+<video>태그의 preload 속성은  페이지가 로드될 때 비디오 파일이 같이 로드되어야 하는지 여부와 그 방법을 명시합니다.
+auto 속성값은 페이지가 로드될 때 브라우저가 전체 비디오 파일도 같이 로드해야 된다. 라는 뜻입니다. -->
+
+<h1>iframe 아이프레임 연습 1</h1> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uCHuTxVYtsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<embed width="560" height="315" src="https://www.youtube.com/embed/uCHuTxVYtsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+<embed width="500", height="400">
+</body>
+
+</html>
