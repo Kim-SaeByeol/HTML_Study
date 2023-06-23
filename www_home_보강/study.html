@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function add(){
+            var a=document.getElementById("op1").value;
+            var b=document.getElementById("op2").value;
+            document.getElementById("result").value=parseInt(a)+parseInt(b); 
+        }
+    </script>
+    
+    <form>
+        <input type="text" id="op1" size="5"> +
+        <input type="text" id="op2" size="5"> 
+        <input type="button" value="=" onclick="add();"> 
+        <input type="text" id="result" size="5">
+    </form>
+    
+</body>
+</html>

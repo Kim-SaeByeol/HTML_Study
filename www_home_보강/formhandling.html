@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta authors="임순범 박희민" />
+    <meta copyright="본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음" />
+    <title> JavaScript을 사용한 폼 처리 </title>
+</head>
+
+<body>
+    <h2> 서적 주문 양식 </h2>
+    <form action="">
+        <p> 주문서 </p>
+        <table border="1">
+            <tr>
+                <th> 책 제목 </th>
+                <th> 가격 </th>
+                <th> 수량 </th>
+                <th> 합계 </th>
+            </tr>
+            <tr>
+                <td> 멀티미디어 배움터2.0 </td>
+                <td> 25,000원 </td>
+                <td> <input id="book1" type="text" size="2" value="0" onclick="this.select();" /> </td>
+                <td> <input id="book1Total" type="text" size="6" value="0" /> 원</td>
+            </tr>
+            <tr>
+                <td> 모바일 멀티미디어 </td>
+                <td> 27,000원 </td>
+                <td> <input id="book2" type="text" size="2" value="0" onclick="this.select();" /> </td>
+                <td> <input id="book2Total" type="text" size="6" value="0" /> 원</td>
+            </tr>
+            <tr>
+                <td> 자바입문: 이론과 실습 </td>
+                <td> 25,000원 </td>
+                <td> <input id="book3" type="text" size="2" value="0" onclick="this.select();" /> </td>
+                <td> <input id="book3Total" type="text" size="6" value="0" /> 원</td>
+            </tr>
+            <tr>
+                <td> 합계 </td>
+                <td> &nbsp; </td>
+                <td> <input id="totalNumber" type="text" size="2" value="0" /> </td>
+                <td> <input id="totalPrice" type="text" size="6" value="0" /> 원</td>
+            </tr>
+        </table> <br />
+        <input type="button" value="합계계산" onclick="updateAll();" />
+        <input type="reset" value="초기화" />
+    </form>
+
+    <script type="text/javascript">
+        function updateAll() {
+            document.getElementById("totalNumber").value = (parseInt(document.getElementById("book1").value) + parseInt(document.getElementById("book2").value) + parseInt(document.getElementById("book3").value));
+            
+            document.getElementById("totalPrice").value = (parseInt(document.getElementById("book1Total").value) + parseInt(document.getElementById("book2Total").value) + parseInt(document.getElementById("book3Total").value));
+ 
+        }
+    </script>
+
+</body>
+
+</html>

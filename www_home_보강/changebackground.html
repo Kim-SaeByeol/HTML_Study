@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta authors="임순범 박희민"/>
+<meta copyright="본 예제는 [HTML5 웹프로그래밍 입문] 교재를 이용한 교육에만 사용할 수 있음"/>
+<title> CSS Access using JavaScript </title>
+</head>
+<body>
+
+<div id="outerBox" style="background: blue; width: 550px; height:300px;" >
+
+<div id="innerBox"
+     style="background: yellow; width: 450px; height:200px;
+            position: absolute; left: 50px; top: 50px;">
+
+    <img id="img1" src="img/image1.png" width="100px" style="position: absolute; left: 50px; top: 25px; visibility: visible;">
+
+    <img id="img2" src="img/image2.png" width="100px" 
+       style="position: absolute; left: 175px; top: 25px; visibility: visible;">
+
+    <img id="img3" src="img/image3.png" width="100px" 
+       style="position: absolute; left: 300px; top: 25px; visibility: visible;">
+</div>
+
+</div>
+
+<script type="text/javascript">
+    function changeC(id,color){
+        document.getElementById(id).style.background=color;
+        
+    }
+</script>
+outbox:
+<button onclick="changeC('outerBox', 'red');">빨강색</button> <br>
+inbox:
+<button onclick="changeC('innerBox', 'blue');">파란색</button>
+</body>
+</html>
