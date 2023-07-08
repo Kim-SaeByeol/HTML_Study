@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인하기</title>
+    <link rel="stylesheet" href="/css/login.css"/>
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        
+        // HTML로딩이 완료되고, 실행됨
+        $(document).ready(function () {
+
+            // 회원가입
+            $("#btnUserReg").on("click", function () { 
+                // 버튼 클릭했을때, 발생되는 이벤트 생성함(onclick 이벤트와 동일함)
+                location.href = "/user/userRegForm";
+            })
+
+            // 아이디 찾기
+            $("#btnSearchUserId").on("click", function () { 
+                // 버튼 클릭했을때, 발생되는 이벤트 생성함(onclick 이벤트와 동일함)
+                location.href = "/user/searchUserId";
+            })
+
+            // 비밀번호 찾기
+            $("#btnSearchPassword").on("click", function () { 
+                // 버튼 클릭했을때, 발생되는 이벤트 생성함(onclick 이벤트와 동일함)
+                location.href = "/user/searchPassword";
+            })
+
+        })
+        function checkInputData() {
+            let f = document.getElementById("login-form"); // form 태그
+
+            if (f.user_id.value === "") {
+                alert("아이디를 입력하세요.");
+                f.user_id.focus();
+                return false;
+            }
+
+            if (f.password.value === "") {
+                alert("비밀번호를 입력하세요.");
+                f.password.focus();
+                return false;
+            }
+
+        }
+        //아이디 저장 로직
+        function saveUsername() {
+            //입력된 아이디 값을 savename 에 저장
+            var savename = document.getElementsByName("userName")[0].value;
+            //체크박스의 체크가 되어있다면 true
+            if (document.getElementById("remember-check").checked) {
+                //savename 을 value 값으로써 넘겨줌.
+              document.getElementsByName('userName')[0].value = savename;
+            }
+            }
+    </script>
+</head>
+<body>
+    <div class="login-wrapper">
+        <h2>로그인하기</h2>
+        <form action="/user/loginProc" method="post" onsubmit="checkInputData()" id="login-form">
+            <input type="text" name="user_id" id="user_id" placeholder="Id" value="">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <label for="remember-check">
+                <input type="checkbox" id="remember-check" onclick="saveUsername()">아이디 저장하기
+            </label>
+            <input type="submit" value="Login" id="btnLogin">
+            <input type="button" value="회원가입" id="btnUserReg">
+            <input type="button" value="아이디찾기" id="btnSearchUserId">
+            <input type="button" value="비밀번호찾기" id="btnSearchPassword">
+        </form>
+    </div>
+</body>
+</html>
